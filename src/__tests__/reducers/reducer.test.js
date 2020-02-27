@@ -1,4 +1,4 @@
-import reducer from './../../src/reducers/reducer';
+import reducer from './../../reducers/reducer';
 
 describe('reducer', () => {
 
