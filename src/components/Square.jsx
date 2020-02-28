@@ -12,4 +12,14 @@ function Square(props) {
     );
   }
 
+Square.PropTypes = {
+  squares: PropTypes.object
+};
+
+const mapStateToProps = state => {
+  return {
+    squares: state.squares
+  }
+}
+
 export default Square;

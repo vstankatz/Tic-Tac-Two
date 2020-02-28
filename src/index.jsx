@@ -9,15 +9,18 @@ import { HashRouter } from 'react-router-dom';
 
 const store = createStore(reducer);
 
+let unsubscribe = store.subscribe(() =>
+console.log(store.getState())
+);
 
 const render = (Component) => {
 
   ReactDOM.render(
+    <HashRouter>
     <Provider store={store}>
-      <HashRouter>
         <Component />
-      </HashRouter>
-    </Provider>,
+    </Provider>
+    </HashRouter>,
     document.getElementById('root')
   );
 }
